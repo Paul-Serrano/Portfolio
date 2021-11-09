@@ -64,7 +64,7 @@
         <img src="Icons/Arrow right.png" alt="Arrow" />
       </div>
     </button>
-    <div class="phone-option-content">
+    <div class="phone-option-content" id="phone-option-content">
       <div class="close-option">
         <span class="close cursor" onclick="closeOption()">&times;</span>
       </div>
@@ -233,6 +233,36 @@
           <hr />
           <span>WebForce3 Digital School</span>
           <span>33700 Mérignac</span>
+          <hr />
+          <div class="social-media-block">
+            <a href="facebook.com/PaulSerrano30" class="facebook" target="_blank"
+              ><img
+                class="social-media-icon"
+                src="Icons/facebook.png"
+                alt="facebook"
+            /></a>
+            <a href="https://github.com/Paul-Serrano" class="github" target="_blank"
+              ><img class="social-media-icon" src="Icons/github.png" alt="github"
+            /></a>
+            <a href="https://www.linkedin.com/in/serrano-paul/" class="linkedin" target="_blank"
+              ><img
+                class="social-media-icon"
+                src="Icons/linkdedin.png"
+                alt="linkedin"
+            /></a>
+            <a href="https://twitter.com/Lambada_Limbo" class="twitter" target="_blank"
+              ><img
+                class="social-media-icon"
+                src="Icons/twitter.png"
+                alt="twitter"
+            /></a>
+            <a href="#" class="spotify" target="_blank"
+              ><img
+                class="social-media-icon"
+                src="Icons/spotify.png"
+                alt="spotify"
+            /></a>
+          </div>
           <hr class="last-hr-intro" />
         </div>
       </div>
@@ -303,13 +333,13 @@
             <div class="modal-plaquette-block">
               <img
                 class="modal-plaquette-img"
-                src="Images/Plaquette Webforce3-1.png"
+                src="Images/Plaquette-Webforce3-1.png"
                 alt="Brochure"
                 id="modalplaquette"
               />
               <img
                 class="modal-plaquette-img"
-                src="Images/Plaquette Webforce3-2.png"
+                src="Images/Plaquette-Webforce3-2.png"
                 alt="Brochure"
                 id="modalplaquette"
               />
@@ -472,7 +502,7 @@
                   src="Icons/customer service.png"
                   alt="customer-service"
                 />
-                <div class="bubble" id="teamworkbubble">
+                <div class="bubble" id="customerbubble">
                   <h5 class="eng">Customer Serivce</h5>
                   <h5 class="fr">Service client</h5>
                   <div class="bubble-content">
@@ -1050,9 +1080,22 @@
           </div>
           <div class="content contact">
             <form class="contact-form" action="" method="POST">
-              <div class="form-name">
-                <div class="input-block">
-                  <label for="name" class="name-label"
+              <div class="form-line">
+                <div class="input-block gender-input-block">
+                  <label for="gender" class="gender-label label"
+                    ><p class="eng">Gender</p>
+                    <p class="fr">Genre</p></label
+                  >
+                  <input
+                    class="input-form input-gender"
+                    type="text"
+                    name="gender"
+                    id="gender"
+                    placeholder="optional"
+                  />
+                </div>
+                <div class="input-block name-input-block">
+                  <label for="name" class="name-label label" id="name-label"
                     ><p class="eng">Name</p>
                     <p class="fr">Nom</p></label
                   >
@@ -1061,11 +1104,11 @@
                     type="text"
                     name="name"
                     id="name"
-                    required
+                    placeholder="required"
                   />
                 </div>
-                <div class="input-block surname-input-block">
-                  <label for="surname" class="surname-label"
+                <div class="input-block name-input-block">
+                  <label for="surname" class="surname-label label" id="surname-label"
                     ><p class="eng">Surname</p>
                     <p class="fr">Prénom</p></label
                   >
@@ -1074,62 +1117,176 @@
                     type="text"
                     name="surname"
                     id="surname"
-                    required
+                    placeholder="required"
                   />
                 </div>
               </div>
-              <div class="input-block mail-input-block">
-                <label class="mail-label" for="mail"
-                  ><p class="eng">Mail</p>
-                  <p class="fr">E-mail</p></label
-                >
-                <input
-                  class="input-form"
-                  type="email"
-                  name="mail"
-                  id="mail"
-                  required
-                />
+              <div class="form-line">
+                <div class="input-block tel-input-block">
+                  <label for="tel" class="tel-label label"
+                    ><p class="eng">Phone</p>
+                    <p class="fr">Téléphone</p></label
+                  >
+                  <input
+                    class="input-form input-tel"
+                    type="text"
+                    name="tel"
+                    id="tel"
+                    placeholder="optional"
+                  />
+                </div>
+                <div class="input-block mail-input-block">
+                  <label class="mail-label label" for="mail" id="mail-label"
+                    ><p class="eng">Mail</p>
+                    <p class="fr">E-mail</p></label
+                  >
+                  <input
+                    class="input-form input-mail"
+                    type="email"
+                    name="mail"
+                    id="mail"
+                    placeholder="required"
+                  />
+                </div>
               </div>
-              <div class="input-message-block">
-                <label for="message"></label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="12"
-                  cols="6"
-                  placeholder="Your message"
-                  required
-                >
-                </textarea>
+              <div class="form-line">
+                <div class="input-block country-input-block">
+                  <label for="country" class="country-label label"
+                    ><p class="eng">Country</p>
+                    <p class="fr">Pays</p></label
+                  >
+                  <input
+                    class="input-form input-country"
+                    type="text"
+                    name="country"
+                    id="country"
+                    placeholder="optional"
+                  />
+                </div>
+                <div class="input-block city-input-block">
+                  <label for="city" class="city-label label"
+                    ><p class="eng">City</p>
+                    <p class="fr">Ville</p></label
+                  >
+                  <input
+                    class="input-form input-city"
+                    type="text"
+                    name="city"
+                    id="city"
+                    placeholder="optional"
+                  />
+                </div>
               </div>
-              <button class="form-btn" type="submit" name="contact-form">
-                <p class="eng">Send</p>
-                <p class="fr">Envoyer</p>
-              </button>
+              <div class="form-line">
+                <div class="input-block company-input-block">
+                  <label for="company" class="company-label label"
+                    ><p class="eng">Company</p>
+                    <p class="fr">Entreprise</p></label
+                  >
+                  <input
+                    class="input-form input-gender"
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="optional"
+                  />
+                </div>
+                <div class="input-block position-input-block">
+                  <label for="position" class="input-label label"
+                    ><p class="eng">Position</p>
+                    <p class="fr">Poste</p></label
+                  >
+                  <input
+                    class="input-form input-position"
+                    type="text"
+                    name="position"
+                    id="position"
+                    placeholder="optional"
+                  />
+                </div>
+              </div>
+              <div class="form-line meet-form">
+                <p class="eng" id="meet-ask">How did You learn about me ?</p>
+                <p class="fr" id="meet-ask">
+                  Où avez vous entendu parler de moi ?
+                </p>
+                <div class="meet-block">
+                  <div class="meet-input-block">
+                    <input
+                      id="social-media"
+                      type="checkbox"
+                      value="Social Media"
+                      name="meet[]"
+                    />
+                    <label for="social-media"
+                      ><p class="eng">Social Media</p>
+                      <p class="fr">Réseaux Sociaux</p></label
+                    >
+                  </div>
+                  <div class="meet-input-block">
+                    <input
+                      id="reseau-perso"
+                      type="checkbox"
+                      value="Personal Network"
+                      name="meet[]"
+                    />
+                    <label for="reseau-perso"
+                      ><p class="eng">Perso Network</p>
+                      <p class="fr">Réseau Perso</p></label
+                    >
+                  </div>
+                  <div class="meet-input-block">
+                    <input
+                      id="reseau-pro"
+                      type="checkbox"
+                      value="Profesionnal Network"
+                      name="meet[]"
+                    />
+                    <label for="reseau-pro"
+                      ><p class="eng">Pro Network</p>
+                      <p class="fr">Réseau Pro</p></label
+                    >
+                  </div>
+                  <div class="meet-input-block">
+                    <input
+                      id="reseau-acad"
+                      type="checkbox"
+                      value="Webforce3"
+                      name="meet[]"
+                    />
+                    <label for="reseau-acad"><p>WebForce3</p></label>
+                  </div>
+                </div>
+
+                <div class="meet-other">
+                  <label class="label" for="meet-other"></label>
+                  <input
+                    id="meet-other"
+                    type="text"
+                    placeholder="other, please specify"
+                    name="meet-other"
+                  />
+                </div>
+              </div>
+              <div class="form-btn-block">
+                <button onclick="messageBlock()" class="message-btn" type="button" name="message-form">
+                  <p class="eng">Message</p>
+                  <p class="fr">Message</p>
+                </button>
+              </div>
+              <div class="message-block" id="message-block">
+              <textarea name="message"></textarea>
+              <div class="message-btn-block">
+                <button onclick="delaySub()" class="form-btn" type="submit" name="contact-form">
+                  <p class="eng">Send Informations & Message</p>
+                  <p class="fr">Envoyer Informations & Message</p>
+                </button>
+                <button onclick="backForm()" class="form-btn" type="button">
+                  <p class="eng">Back to the Informations</p>
+                  <p class="fr">Retour aux Informations</p>
+                </button></div>               
+              </div>
             </form>
-            <div class="social-media-block">
-              <a href="facebook.com/PaulSerrano30" target="_blank"
-                ><img
-                  class="social-media-icon"
-                  src="Icons/facebook.png"
-                  alt="facebook"
-              /></a>
-              <a href="mailto:paul.serrano08374@gmail.com" target="_blank"
-                ><img
-                  class="social-media-icon"
-                  src="Icons/gmail.png"
-                  alt="gmail"
-              /></a>
-              <a
-                href="https://www.linkedin.com/in/serrano-paul/"
-                target="_blank"
-                ><img
-                  class="social-media-icon"
-                  src="Icons/linkdedin.png"
-                  alt="linkdin"
-              /></a>
-            </div>
           </div>
         </div>
         <div class="block-container">
@@ -1561,11 +1718,11 @@
         <div class="game">
           <div class="player one">
             <p>Player 1</p>
-            <img class="dice d-one" src="./images/dice1.png" alt="dice" />
+            <img class="dice d-one" src="./Images/dice1.png" alt="dice" />
           </div>
           <div class="player two">
             <p>Player 2</p>
-            <img class="dice d-two" src="./images/dice1.png" alt="dice" />
+            <img class="dice d-two" src="./Images/dice1.png" alt="dice" />
           </div>
         </div>
         <button class="rolling-dice-btn">Let's Play !!!</button>
@@ -2328,42 +2485,63 @@
       </div>
     </section>
     <script type="text/javascript" src="Portfolio.js"></script>
+    <script src="//cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace("message");
+    </script>
   </body>
 </html>
 
 <?php
 
+
+
 if(isset($_POST['contact-form'])){
 
-    if(!empty($_POST['message'])) {
-        $header = "";
-        $header="MIME-Version: 1.0\r\n";
-        $header.='From:"PrimFX.com"<support@primfx.com>'."\n";
-        $header.='Content-Type:text/html; charset="utf-8"'."\n";
-        $header.='Content-Transfer-Encoding: 8bit';
-    
-        $message='
-        <html>
-            <body>
-                <div align="center">
-                    <p>Nom de l\'expéditeur :</p>'.$_POST['name'].' '.$_POST['surname'].'<br />
-                    <p>Mail de l\'expéditeur :</p>'.$_POST['mail'].'<br />
-                    <br />
-                    '.nl2br($_POST['message']).'
-                </div>
-            </body>
-        </html>
-        ';
-    
-        mail("paul.serrano08374@gmail.com", "Contact -- Portfolio !", $message, $header);
-        $msg="Votre message a bien été envoyé !";
+    $check = "";
+    foreach($_POST["meet"] as $checkoptions){
+    $check .= $checkoptions." & ";
     }
+  
+         if(true) {
 
-    else
-	{
-		$msg="Tous les champs doivent être complétés !";
-	}
-}
+          $header = "";
+          $header="MIME-Version: 1.0\r\n";
+          $header.='From:"Portfolio'."\n";
+          $header.='Content-Type:text/html; charset="utf-8"'."\n";
+          $header.='Content-Transfer-Encoding: 8bit'; 
+          $message='
+          <html>
+            <body>
+              <div align="center">
+                <p>Nom de l\'expéditeur :</p>
+                '.$_POST['name'].' '.$_POST['surname'].' -- '.$_POST['gender'].'<hr />
+                <p>Mail de l\'expéditeur :</p>
+                '.$_POST['mail'].'<hr />
+                <p>Vous êtes localisés en:</p>
+                '.$_POST['country'].' à '.$_POST['city'].'<hr />
+                <p>Vous travaillez pour:</p>
+                '.$_POST['company'].' en tant que '.$_POST['position'].'<hr /> 
+                <p>Vous avez entendu parler de moi par :</p>
+                '.$check.' '.$_POST['meet-other'].'<hr />
+                '.nl2br($_POST['message']).'
+              </div>
+            </body>
+          </html>
+          '; 
+  
+  mail("paul.serrano08374@gmail.com", "Contact -- Portfolio !", $message,
+  $header);
 
 
-?>
+
+         }
+
+         else {
+          return;
+        }
+         
+         echo "<script>alert('Votre message a bien été envoyé, je vous répondrais dans les meilleurs délais !');</script>";
+         sleep(1);
+ 
+} ?>

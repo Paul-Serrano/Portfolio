@@ -247,7 +247,7 @@ section {
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom: solid black;
   position: absolute;
-  top: -50%;
+  top: -60%;
 }
 
 .dropdown {
@@ -289,7 +289,7 @@ section {
 
 @keyframes dropdown {
   0% {
-    top: -50%;
+    top: -60%;
   }
 
   100% {
@@ -303,7 +303,7 @@ section {
   }
 
   100% {
-    top: -50%;
+    top: -60%;
   }
 }
 
@@ -1488,6 +1488,7 @@ input {
 
 #infoblock {
   width: 30%;
+  height: 80vh;
 }
 
 .block:hover {
@@ -1513,6 +1514,7 @@ input {
   font-size: 3em;
   margin: 2% auto 0 auto;
   transition: 0.6s ease;
+  align-items: center;
 }
 
 .blockH-title {
@@ -2247,6 +2249,8 @@ input {
 
 .educ-content {
   display: flex;
+  width: 90%;
+  margin: auto;
 }
 
 .educ-container {
@@ -2615,6 +2619,7 @@ input {
   border: solid;
   cursor: pointer;
   background-color: #bf009a;
+  font-family: "Lobster", sans-serif;
 }
 
 .rolling-dice-btn:hover {
@@ -3267,6 +3272,7 @@ input {
 
   #infoblock {
     order: -1;
+    height: 100vh;
   }
 
   #softblock {
@@ -3415,13 +3421,18 @@ input {
     display: flex;
   }
 
+  #experience {
+    height: 100%;
+  }
+
   .experience-content {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
     width: 100%;
     justify-content: center;
-    grid-row-gap: 20%;
+    grid-row-gap: 0;
+    margin: 0;
   }
 
   .xp-init-block {
@@ -3433,7 +3444,7 @@ input {
     width: 100%;
     border: none;
     background: none;
-    top: 17.5%;
+    top: 10%;
   }
 
   .xp-nav {
@@ -3450,7 +3461,11 @@ input {
 
   .xp-content {
     background-color: #312f2f;
-    padding-bottom: 10%;
+    padding: 10% 0;
+  }
+
+  #retailblock .xp-content {
+    padding: 10% 0 50%;
   }
 
   .xp-content ul {
@@ -3484,7 +3499,6 @@ input {
 
   .blockS {
     grid-template-rows: 1fr 1fr 1fr;
-    height: 50vh;
   }
 
   .educ-block {

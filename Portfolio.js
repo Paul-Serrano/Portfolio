@@ -49,9 +49,9 @@ const dice = document.querySelectorAll(".dice");
 btn.addEventListener("click", (evt) => {
   const randomOne = Math.floor(Math.random() * 6) + 1;
   const randomTwo = Math.floor(Math.random() * 6) + 1;
-  dice[0].src = `./images/dice${randomOne}.png
+  dice[0].src = `./Images/dice${randomOne}.png
     `;
-  dice[1].src = `./images/dice${randomTwo}.png
+  dice[1].src = `./Images/dice${randomTwo}.png
     `;
 
   if (randomOne === randomTwo) {
@@ -428,6 +428,8 @@ function openXp(a) {
   setTimeout(function openXpInit() {
     blockXp[a].style.visibility = "visible";
     blockXp[a].classList.add("flip-card-90-0");
+    document.getElementsByClassName("experience-content")[0].style.visibility =
+      "hidden";
   }, 1000);
 }
 
@@ -438,6 +440,8 @@ function closeXp(a) {
     blockXpInit[i].classList.remove("flip-card-0-90-0");
   }
   setTimeout(function closeXpInit() {
+    document.getElementsByClassName("experience-content")[0].style.visibility =
+      "visible";
     blockXp[a].style.visibility = "hidden";
   }, 1000);
 }
